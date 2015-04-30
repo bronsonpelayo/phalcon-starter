@@ -1,0 +1,41 @@
+<?php
+$title = "Edit User";
+?>
+<div class="row">
+    <div class="large-8 medium-8 columns">
+        <hr />
+        <h5><?php echo $title;?></h5>
+        <?php echo $viewmodel->getModelMessages();?>
+
+        <form name="frm" action="" method="post"  >
+
+            <div class="row">
+                <div class="large-4 medium-4 columns">
+                    <label>First Name</label>
+                    <?php echo $form->render("firstname");?>
+                    <?php echo $viewmodel->getDecoratedMessageFor("firstname");?>
+
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <label>Last Name</label>
+                    <?php echo $form->render("lastname")?>
+                    <?php echo $viewmodel->getDecoratedMessageFor("lastname");?>
+                </div>
+                <div class="large-4 medium-4 columns">
+                    <label>Email</label>
+                    <?php echo $form->render("email")?>
+                    <?php echo $viewmodel->getDecoratedMessageFor("email");?>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <button class="button small" name="save">Save</button>
+                    <a href="<?php echo $this->url->get("user");?>" class="button secondary small" >Cancel</a>
+                    <?php echo $form->render("id")?>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

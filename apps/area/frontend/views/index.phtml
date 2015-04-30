@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phalcon Starter Project <?php echo (empty($title)? "" : $title);?></title>
+    <link rel="stylesheet" href="<?php echo $this->url->get("public/css/foundation.css");?>" />
+    <script src="<?php echo $this->url->get("public/js/vendor/modernizr.js");?>"></script>
+    <style type="text/css">
+        small.error {
+            display: block;
+            padding: 0.375rem 0.5625rem 0.5625rem;
+            margin-top: -10px;
+            margin-bottom: 1rem;
+            font-size: 0.75rem;
+            font-weight: normal;
+            font-style: italic;
+            background: #f04124;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+<?php $this->partial("shared/nav" , $identity); ?>
+<?php echo $this->getContent(); ?>
+
+<script src="<?php echo $this->url->get("public/js/vendor/jquery.js");?>" ></script>
+<script src="<?php echo $this->url->get("public/js/foundation.min.js");?>" ></script>
+
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?php
+$title = "Users";
+?>
+<br />
+<div class="row">
+    <div class="large-12 columns">
+        <table width="100%">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>*</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(!empty($viewmodel))
+            {
+                foreach($viewmodel as $model)
+                {
+                ?>
+                    <tr>
+                        <td><?php echo $model->id;?></td>
+                        <td><?php echo $model->username;?></td>
+                        <td><?php echo $model->getFullname();?></td>
+                        <td><?php echo $model->email;?></td>
+                        <td>
+                            <a href="<?php echo $this->url->get("user/edit/".$model->id);?>">Edit</a>
+                            <a href="<?php echo $this->url->get("user/delete/".$model->id);?>">Delete</a>
+                        </td>
+                    </tr>
+            <?php }
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>
