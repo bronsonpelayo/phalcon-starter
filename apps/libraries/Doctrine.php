@@ -7,7 +7,10 @@ use Doctrine\Common\ClassLoader,
 
 /**
  * Class Doctrine
+ * Based on Integrating Doctrine 2 with CodeIgniter 2 by Joseph Wynn
+ * (http://wildlyinaccurate.com/integrating-doctrine-2-with-codeigniter-2/)
  * @package Libraries
+ *
  */
 
 class Doctrine
