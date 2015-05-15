@@ -12,5 +12,4 @@ Includes:
 - Modular application ready.
 - Viewmodel (with Validation)    
 - Database schema (Username: admin / Password: password)
-- Data Annotation
-
+- Data Annotation - Authenticate, Authenticate(Roles="")
